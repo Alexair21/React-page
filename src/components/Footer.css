@@ -1,0 +1,48 @@
+.borde {
+    position: relative;
+    margin-top: 2%;
+    --mask: linear-gradient(to bottom, #0000 30px, #000 0),
+      radial-gradient(30px, #000 98%, #0000) top/55.5px 60px;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    background-image: url("/src/assets/img/footer.jpg");
+    background-color: #0ea498;
+    background-size: cover; /* Asegura que la imagen cubra todo el div */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 250px;
+  }
+  
+  .footer {
+    text-align: center;
+    height: auto; /* Ajusta el tamaño del footer automáticamente */
+  }
+  
+  .logo {
+    position: relative;
+    width: 15%; /* Ajusta el tamaño del logo */
+    margin: 0 auto; /* Centra el logo horizontalmente */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 152, 140, 0.5); /* Capa verde medio transparente */
+    z-index: 1; /* Asegura que la capa esté delante de la imagen de fondo */
+  }
+  
+  .logo {
+    z-index: 2; /* Asegura que el logo esté delante de la capa verde */
+  }
+  
+  .footer-text {
+    position: relative;
+    z-index: 3; /* Asegura que el texto esté delante de la capa verde */
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }

@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "core-rhino";
+  src: url("src/assets/fonts/core-rhino.ttf") format("woff2"),
+    url("src/assets/fonts/core-rhino.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "core-rhino", sans-serif;
+}
+
+.custom-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.custom-dots li button:before {
+  color: #a3a3a3; /* Color desactivado */
+}
+
+.custom-dots li.slick-active button:before {
+  color: #000; /* Color activado */
+}
+
+.hero-section .nav-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.hero-section .nav-dots button {
+  width: 16px; /* Tamaño más grande */
+  height: 16px; /* Tamaño más grande */
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: #c8b098; /* Color de los puntos inactivos */
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.hero-section .nav-dots button.bg-primary {
+  background-color: #0ea498; /* Color de los puntos activos */
+}
+
+.img-slide {
+  width: 65%;
+  object-fit: cover;
+}
+
+.Bcarta {
+  color: white;
+  width: 150px;
+  height: 50px;
+  margin: 8px;
+  border-radius: 15px;
+  background: #0ea498;
+}
+
+.Bcarta:hover {
+  background: #064843;
+}
+
+.img-pez{
+  width: 15%;
+  height: 15%;
+  position: absolute;
+  transform: scale(-1, 1);
+  left: 25px;
+  bottom: 45px;
+}
+
+.red:hover {
+  width: 40px;
+  height: 40px;
+}

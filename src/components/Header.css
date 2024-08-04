@@ -1,0 +1,48 @@
+/* Definición de la fuente */
+@font-face {
+  font-family: "core-rhino";
+  src: url("/src/assets/fonts/core-rhino.ttf") format("woff2"),
+    url("/src/assets/fonts/core-rhino.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-image: url("/src/assets/img/textura2.png");
+}
+
+/* Uso de la fuente en enlaces de navegación */
+.nav-link {
+  font-size: 20px;
+  font-family: "core-rhino", sans-serif;
+}
+
+.nav-link:hover {
+  color: #3e2c7a;
+}
+
+.but-2 {
+  display: inline-block; /* Ajusta al contenido */
+  padding: 0; /* Remueve cualquier padding extra */
+  margin: 0; /* Remueve cualquier margen extra */
+  width: auto; /* Asegura que el ancho del contenedor se ajuste al contenido */
+}
+
+.logo {
+  display: block; /* Asegura que la imagen se comporte como un bloque */
+  width: 80px; /* Establece un ancho específico para la imagen */
+  height: auto; /* Mantén la proporción de la imagen */
+}
+
+@media (max-width: 900px) {
+  .logo {
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    width: 80px; /* Establece un ancho específico para la imagen */
+    height: auto;
+  }
+
+  nav{
+    background-color: white;
+    background-image: url("/src/assets/img/textura2.png");
+  }
+}
