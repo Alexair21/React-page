@@ -15,8 +15,8 @@ const Delivery = () => {
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-2 relative h-40">
-        <div className="anuncio text-center ml-72 -mt-16">
+      <div className="grid grid-cols-2 gap-2 relative">
+        <div className="anuncio text-center -mt-16">
           <p className="text-secondary text-2xl">Ahora puedes</p>
           <p className="text-primary text-5xl">Contactarnos</p>
           <h1 className="mt-2 text-4xl text-secondary">974 985 555</h1>
