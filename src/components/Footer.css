@@ -6,7 +6,6 @@
     -webkit-mask: var(--mask);
     mask: var(--mask);
     background-image: url("/src/assets/img/footer.jpg");
-    background-color: #0ea498;
     background-size: cover; /* Asegura que la imagen cubra todo el div */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
@@ -27,12 +26,10 @@
   
   .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(7, 152, 140, 0.5); /* Capa verde medio transparente */
-    z-index: 1; /* Asegura que la capa esté delante de la imagen de fondo */
+    background-color: rgba(12, 172, 159, 0.5);
+    background-size: cover;
   }
   
   .logo {

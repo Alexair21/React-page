@@ -4,8 +4,8 @@ import logo from '../assets/logo.png';
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="borde relative">
+    <div className="footer ">
+      <div className="borde relative ">
         <div className="overlay"></div>
         <img className="logo" src={logo} alt="" />
         <p className="footer-text -mt-3">© La Gran Concha Norteña 2024. Todos los derechos reservados.</p>
