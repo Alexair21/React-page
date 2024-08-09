@@ -51,29 +51,29 @@ const Hero = () => {
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="w-full flex-shrink-0 flex">
-            <div className="w-1/2 flex items-center justify-center animate__animated animate__backInLeft">
+          <div key={index} className="lema w-full flex-shrink-0 flex mb-80  md:mb-28">
+            <div className="w-72 flex items-center justify-center animate__animated animate__backInLeft md:flex">
               <div className="text-center">
-                <h1 className="text-5xl md:text-4xl text-primary">
+                <h1 className="text-3xl md:text-4xl text-primary">
                   {slide.title}
                 </h1>
-                <p className="text-7xl md:text-7xl text-primary">
+                <p className="text-6xl md:text-7xl text-primary">
                   {slide.subtitle}
                 </p>
-                <p className="text-7xl md:text-7xl text-secondary">
+                <p className="text-6xl md:text-7xl text-secondary">
                   {slide.description}
                 </p>
                 <div className="mt-4 align-center">
-                  <img className=" w-14 mx-auto" src={slide.icon} alt="Icon" />
-                  <button className="Bcarta">
+                  <img className="w-10 md:w-14 mx-auto" src={slide.icon} alt="Icon" />
+                  <button className="Bcarta w-32 h-11">
                     <a href="#menu">Ver Carta!</a>
                   </button>
                 </div>
               </div>
             </div>
-            <div className="w-1/2 flex items-center justify-center animate__animated animate__backInRight">
+            <div className="w-72 flex items-center justify-center animate__animated animate__backInRight">
               <img
-                className="img-slide mx-auto"
+                className="img-slide mx-auto w-72"
                 src={slide.image}
                 alt={slide.subtitle}
               />
@@ -81,8 +81,10 @@ const Hero = () => {
           </div>
         ))}
       </div>
+
+
       {/* Puntos de Navegación */}
-      <div className="nav-dots absolute bottom-10 flex space-x-2">
+      <div className="nav-dots absolute bottom-10 md:flex space-x-2 mb-40 block">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -95,7 +97,7 @@ const Hero = () => {
       </div>
 
       {/* Imagen de pez */}
-      <div className="RedesSociales absolute right-72 bottom-20">
+      <div className="RedesSociales absolute right-72 bottom-20 hidden md:block ">
         <a href="">
           <img className="red inline-block w-9 h-9 mr-2" src={face} alt="facebook" />
         </a>
