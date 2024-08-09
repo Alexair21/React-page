@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import "animate.css";
 import "./Hero.css";
 
-import face from "../assets/img/face.png";
-import insta from "../assets/img/insta.png";
-import tiktok from "../assets/img/tiktok.png";
-import wtsp from "../assets/img/wtsp.png";
-import cubiertos from "../assets/img/cubiertos.png";
-import ceviche from "../assets/img/ceviche.png";
-import cabrito from "../assets/img/cabrito.png";
+import face from "../assets/img/hero/face.webp";
+import insta from "../assets/img/hero/insta.webp";
+import tiktok from "../assets/img/hero/tiktok.webp";
+import wtsp from "../assets/img/hero/wtsp.webp";
+import cubiertos from "../assets/img/hero/cubiertos.webp";
+import ceviche from "../assets/img/hero/ceviche.webp";
+import cabrito from "../assets/img/hero/cabrito.webp";
 
 const Hero = () => {
   const slides = [

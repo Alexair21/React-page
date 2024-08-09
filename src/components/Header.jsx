@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import { RiMenuFill, RiCloseLargeFill } from "react-icons/ri";
 import "./Header.css";
-import 'animate.css';
-import logo from "../assets/logo.png";
+import "animate.css";
+import logo from "../assets/logo.webp";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <header className="flex w-full justify-between xl:justify-start items-center p-4 navbar h-[10vh] z-50">
       <div className="xl:w-1/6 text-center mt-4">
-        <a href="#" className="but-2">
-          <img
-            src={logo}
-            alt="logo"
-            className="block h-auto w-20"
-          />
+        <a href="#" className="but-2 w-auto  m-0 p-0 inline-block">
+          <img src={logo} alt="logo" className="block h-auto w-20" />
         </a>
       </div>
 
@@ -39,7 +35,7 @@ const Navbar = () => {
       </nav>
       <button
         onClick={() => setShowMenu(!showMenu)}
-        className="text-2xl p-2 xl:hidden text-secondary text-wrap text font-w"
+        className="text-4xl font-bold p-2 xl:hidden text-secondary text-wrap text font-w"
       >
         {showMenu ? <RiCloseLargeFill /> : <RiMenuFill />}
       </button>
