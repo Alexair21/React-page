@@ -1,5 +1,4 @@
 import React from "react";
-import "./Nosotros.css";
 import alitas from "../assets/img/alitas.jpg";
 import pulpo from "../assets/img/pulpo.jpg";
 
@@ -11,10 +10,10 @@ const Nosotros = () => {
       >
         <div className="relative md:grid grid-cols-2 gap-2">
           <div className="p-[5%] md:p-[15%] justify-center flex-col flex">
-            <p className="fusion text-secondary text-3xl md:text-7xl m-2 p-0">
+            <p className="fusion text-secondary text-4xl md:text-7xl m-2 p-0">
               Fusión peruana
             </p>
-            <p className="fusion text-secondary text-3xl md:text-7xl m-2 p-0">
+            <p className="fusion text-secondary text-4xl md:text-7xl m-2 p-0">
               Fusión Perucha
             </p>
             <img
@@ -38,7 +37,7 @@ const Nosotros = () => {
             />
 
             <img
-              className="w-[50%] mb-[30%] mr-[20%] md:w-[45%] border-4 border-white shadow-md absolute"
+              className="w-[45%] mb-[30%] mr-[30%] md:w-[45%] border-4 border-white shadow-md absolute"
               src={pulpo}
               alt="pulpo"
             />
