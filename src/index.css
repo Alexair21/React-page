@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "core-rhino";
+    src: url("src/assets/fonts/core-rhino.ttf") format("woff2"),
+      url("src/assets/fonts/core-rhino.ttf") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    font-family: "core-rhino", sans-serif;
+  }
+  
+.boton {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

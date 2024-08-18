@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "animate.css";
-import "./Hero.css";
+
 
 import face from "../assets/img/hero/face.webp";
 import insta from "../assets/img/hero/insta.webp";
@@ -22,7 +22,7 @@ const Hero = () => {
     },
     {
       id: 2,
-      title: "Támbien nuestros",
+      title: "También nuestros",
       subtitle: "Platos",
       description: "Criollos",
       image: cabrito,
@@ -47,33 +47,33 @@ const Hero = () => {
   return (
     <section className="hero-section relative h-[90vh] flex flex-col items-center justify-center overflow-hidden">
       <div
-        className="flex w-full transition-transform duration-1000"
+        className="flex w-full transition-transform duration-1000 mb-32 md:mb-0"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="lema w-full flex-shrink-0 flex mb-80  md:mb-28">
-            <div className="w-72 flex items-center justify-center animate__animated animate__backInLeft md:flex">
-              <div className="text-center">
-                <h1 className="text-3xl md:text-4xl text-primary">
+          <div key={index} className="w-full flex-shrink-0 flex flex-col md:flex-row">
+            <div className="w-full md:w-1/2 flex items-center justify-center animate__animated animate__backInLeft">
+              <div className="text-center p-4">
+                <h1 className="text-3xl md:text-5xl text-primary">
                   {slide.title}
                 </h1>
                 <p className="text-6xl md:text-7xl text-primary">
                   {slide.subtitle}
                 </p>
-                <p className="text-6xl md:text-7xl text-secondary">
+                <p className="text-7xl md:text-7xl text-secondary">
                   {slide.description}
                 </p>
-                <div className="mt-4 align-center">
-                  <img className="w-10 md:w-14 mx-auto" src={slide.icon} alt="Icon" />
-                  <button className="Bcarta w-32 h-11">
+                <div className="mt-4 justify-center">
+                  <img className="w-10 h-10 hidden md:block md:w-14 md:h-14 mx-auto" src={slide.icon} alt="Icon" />
+                  <button className="boton bg-primary text-white hover:bg-emerald-800 m-10">
                     <a href="#menu">Ver Carta!</a>
                   </button>
                 </div>
               </div>
             </div>
-            <div className="w-72 flex items-center justify-center animate__animated animate__backInRight">
+            <div className="w-full md:w-1/2 flex items-center justify-center animate__animated animate__backInRight">
               <img
-                className="img-slide mx-auto w-72"
+                className="img-slide mx-auto w-[80%] h-auto"
                 src={slide.image}
                 alt={slide.subtitle}
               />
@@ -81,34 +81,32 @@ const Hero = () => {
           </div>
         ))}
       </div>
-
-
       {/* Puntos de Navegación */}
-      <div className="nav-dots absolute bottom-10 md:flex space-x-2 mb-40 block">
+      <div className="absolute bottom-10 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-4 h-4 rounded-full ${
-              index === currentSlide ? "bg-primary" : "bg-gray-300"
+              index === currentSlide ? "bg-primary" : "bg-secondary"
             }`}
           ></button>
         ))}
       </div>
 
-      {/* Imagen de pez */}
-      <div className="RedesSociales absolute right-72 bottom-20 hidden md:block ">
+      {/* Redes Sociales */}
+      <div className="absolute bottom-10 right-[20%] space-x-2 hidden md:block">
         <a href="">
-          <img className="red inline-block w-9 h-9 mr-2" src={face} alt="facebook" />
+          <img className="red hover:w-10 h-auto inline-block w-8  md:w-9 md:h-9" src={face} alt="facebook" />
         </a>
         <a href="">
-          <img className="red inline-block w-9 h-9  mr-2" src={insta} alt="instagram" />
+          <img className="red hover:w-10 h-auto inline-block w-8 md:w-9 md:h-9" src={insta} alt="instagram" />
         </a>
         <a href="">
-          <img className="red inline-block w-9 h-9  mr-2" src={tiktok} alt="tiktok" />
+          <img className="red hover:w-10 h-auto inline-block w-8 md:w-9 md:h-9" src={tiktok} alt="tiktok" />
         </a>
         <a href="">
-          <img className="red inline-block w-9 h-9  mr-2" src={wtsp} alt="whatsapp" />
+          <img className="red hover:w-10 h-auto inline-block w-8 md:w-9 md:h-9" src={wtsp} alt="whatsapp" />
         </a>
       </div>
     </section>
