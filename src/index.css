@@ -83,4 +83,10 @@ body {
   }
 }
 
-/* Nosotros*/
+/* Delivery */
+.imagen-chef{
+  mask-image: linear-gradient(
+    black 95%,
+    transparent
+  );
+}
