@@ -3,21 +3,84 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "core-rhino";
-    src: url("src/assets/fonts/core-rhino.ttf") format("woff2"),
-      url("src/assets/fonts/core-rhino.ttf") format("woff");
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "core-rhino";
+  src: url("src/assets/fonts/core-rhino.ttf") format("woff2"),
+    url("src/assets/fonts/core-rhino.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  body {
-    font-family: "core-rhino", sans-serif;
-  }
-  
+@font-face {
+  font-family: "Maternal";
+  src: url("src/assets/fonts/Maternal.ttf") format("woff2"),
+    url("src/assets/fonts/Maternal.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "core-rhino", sans-serif;
+}
+
 .boton {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fusion {
+  font-family: "Maternal", sans-serif;
+
+  text-shadow: 1px 1px 0 #fff, 2px 2px #fff, 8px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Nosotros*/
+.box {
+  background-image: url("/src/assets/img/textura.png");
+  height: calc(
+    100vh - 60px
+  ); 
+}
+
+.box::before,
+.box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background-color: inherit;
+  background-image: inherit;
+  background-size: inherit;
+  background-repeat: inherit;
+  background-position: inherit;
+  --mask: linear-gradient(to bottom, #0000 30px, #000 0),
+    radial-gradient(30px, #000 98%, #0000) top/55.5px 60px;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.box::before {
+  top: -15px; /* Posiciona el borde arriba del contenedor */
+}
+
+.box::after {
+  bottom: -15px; /* Posiciona el borde abajo del contenedor */
+  --mask: linear-gradient(to top, #0000 30px, #000 0),
+    radial-gradient(30px, #000 98%, #0000) bottom/55.5px 60px;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+/* Ocultar en dispositivos pequeños */
+@media (max-width: 767px) {
+  .box::after {
+    content: none;
   }
+  .box::before {
+    content: none;
+  }
+}
+
+/* Nosotros*/

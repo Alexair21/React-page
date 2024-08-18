@@ -25,3 +25,11 @@
 .anuncio span{
     background-color: #d3b18a;
 }
+
+.imagen-nosotros {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
