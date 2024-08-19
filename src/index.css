@@ -90,3 +90,19 @@ body {
     transparent
   );
 }
+
+/* Footer */
+.borde {
+  position: relative;
+  margin-top: 2%;
+  --mask: linear-gradient(to bottom, #0000 30px, #000 0),
+    radial-gradient(30px, #000 98%, #0000) top/55.5px 60px;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  background-image: url("/src/assets/img/footer2.jpg");
+  background-size: cover; /* Asegura que la imagen cubra todo el div */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 250px;
+}
