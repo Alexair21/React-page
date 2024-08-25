@@ -31,7 +31,7 @@ body {
 }
 
 .fusion {
-  font-family: "Maternal", sans-serif;
+  font-family: "core-rhino", sans-serif;
 
   text-shadow: 1px 1px 0 #fff, 2px 2px #fff, 8px 8px 8px rgba(0, 0, 0, 0.5);
 }
@@ -101,4 +101,10 @@ body {
   background-position: center; /* Centra la imagen */
   width: 100%; /* Ocupa todo el ancho del contenedor */
   height: 250px;
+}
+
+/*Menu*/
+
+.menu-titulo{
+  font-family: "Maternal", sans-serif;
 }

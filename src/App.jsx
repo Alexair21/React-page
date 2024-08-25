@@ -1,22 +1,23 @@
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Nosotros from './components/Nosotros';
-import Platillos from './components/Platillos';
-import Delivery from './components/Delivery';
 import Footer from './components/Footer';
+import HomePage from './components/HomePage'; // Importa el nuevo componente
+import Menus from './components/Menus';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <Hero />
-      <Nosotros />
-      <Platillos/>
-      <Delivery />
+      <Routes>
+        <Route path="/" element={<HomePage />} /> {/* Usa HomePage para la ruta principal */}
+        <Route path="/menu" element={<Menus />} />
+        <Route path="/nosotros" element={<HomePage />} /> {/* Redirige a la página principal que incluye "Nosotros" */}
+        <Route path="/platillos" element={<HomePage />} /> {/* Redirige a la página principal que incluye "Platillos" */}
+        <Route path="/delivery" element={<HomePage />} /> {/* Redirige a la página principal que incluye "Delivery" */}
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
-export default App
+export default App;

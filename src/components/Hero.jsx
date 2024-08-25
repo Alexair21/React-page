@@ -96,7 +96,7 @@ const Hero = () => {
 
       {/* Redes Sociales */}
       <div className="absolute bottom-10 right-[20%] space-x-2 hidden md:block">
-        <a href="">
+        <a href="https://www.facebook.com/profile.php?id=100066650876833">
           <img className="red hover:w-10 h-auto inline-block w-8  md:w-9 md:h-9" src={face} alt="facebook" />
         </a>
         <a href="">
