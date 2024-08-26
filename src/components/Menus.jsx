@@ -1,6 +1,9 @@
 import React from "react";
 import entrada from "../assets/img/platos/choritos.jpg";
 import ceviche from "../assets/img/platos/ceviche2.jpg";
+import arrozPato from "../assets/img/platos/arrozconpato.jpg";
+import chicharronPescado from "../assets/img/platos/chicharron.jpg";
+import leche from "../assets/img/platos/leche.jpg";
 
 const Tarjeta = ({ titulo, precio, items, imagen }) => {
   return (
@@ -60,11 +63,14 @@ const Tarjeta2 = ({ titulo, precio, items, imagen }) => {
       </div>
       {/* Contenido a la izquierda */}
       <div className="">
-        <h2 className="text-2xl md:text-5xl font-bold w-full text-secondary mb-4 fusion">
+        <h2 className="text-3xl md:text-5xl font-bold w-full text-secondary mb-8 fusion">
           {titulo}
         </h2>
         {items.map((item, index) => (
-          <div key={index} className="flex justify-between items-center mb-2 md:w-[80%]">
+          <div
+            key={index}
+            className="flex justify-between items-center mb-2 md:w-[80%]"
+          >
             <div className="flex items-center">
               <span className="text-white text-xs md:text-lg mr-2">•</span>
               <span className="text-secondary md:font-bold text-1xl md:text-xl">
@@ -94,6 +100,7 @@ const Tarjeta2 = ({ titulo, precio, items, imagen }) => {
 const Menus = () => {
   return (
     <section>
+      {/* Tarjeta de Entradas */}
       <div className="p-4 md:p-8 max-w-7xl mx-auto rounded-lg">
         <h1 className="fusion text-4xl md:text-5xl lg:text-7xl font-bold text-center mt-6 md:mt-10 mb-4 md:mb-6 text-secondary">
           Nuestra Carta
@@ -141,6 +148,7 @@ const Menus = () => {
           ]}
         />
       </div>
+      {/* Tarjeta de Ceviches */}
       <div className="box flex flex-col justify-center bg-primary bg-cover bg-no-repeat bg-center relative w-full ">
         <Tarjeta2
           titulo="Ceviches"
@@ -177,21 +185,159 @@ const Menus = () => {
               precio: "30",
             },
             {
-              nombre: "Ceviche",
-              descripcion: "de corvina",
-              precio: "37",
+              nombre: "Festival",
+              descripcion: "marino",
+              precio: "65",
             },
             {
-              nombre: "Ceviche",
-              descripcion: "de conchas negras",
+              nombre: "Trilogia",
+              descripcion: "conchera",
+              precio: "39",
+            },
+          ]}
+        />
+      </div>
+      {/* Tarjeta de Platos */}
+      <div className="p-4 md:p-8 max-w-7xl mx-auto rounded-lg">
+        <Tarjeta
+          titulo="Criollos norteños"
+          imagen={arrozPato}
+          items={[
+            {
+              nombre: "Arroz",
+              descripcion: "con pato",
+              puntos: " ...............................",
               precio: "40",
             },
             {
-              nombre: "Ceviche",
-              descripcion: "mellicero",
+              nombre: "Cabrito",
+              descripcion: "(LA ESPECIALIDAD)",
+              puntos: " ...............................",
+              precio: "39",
+            },
+            {
+              nombre: "Pato",
+              descripcion: "guisado",
+              puntos: " ...............................",
+              precio: "35",
+            },
+            {
+              nombre: "Cuy",
+              descripcion: "frito",
+              puntos: " ...............................",
+              precio: "65",
+            },
+            {
+              nombre: "Seco",
+              descripcion: "de chabelo",
+              puntos: " ...............................",
+              precio: "32",
+            },
+            {
+              nombre: "Lomo saltado",
+              descripcion: " (lomo fino)",
+              puntos: " ...............................",
+              precio: "45",
+            },
+          ]}
+        />
+      </div>
+      {/* Tarjeta de Chicharrones */}
+      <div className="box flex flex-col justify-center bg-primary bg-cover bg-no-repeat bg-center relative w-full ">
+        <Tarjeta2
+          titulo="Chicharrones"
+          imagen={chicharronPescado}
+          items={[
+            {
+              nombre: "Chicharrón",
+              descripcion: "de pescado",
+              precio: "32",
+            },
+            {
+              nombre: "Chicharrón",
+              descripcion: "mixto",
+              precio: "34",
+            },
+            {
+              nombre: "Chicharrón",
+              descripcion: "de langostinos",
+              precio: "36",
+            },
+            {
+              nombre: "Chicharrón",
+              descripcion: "de calamar",
+              precio: "36",
+            },
+            {
+              nombre: "Jalea",
+              descripcion: "mixta",
+              precio: "39",
+            },
+            {
+              nombre: "Pesacado",
+              descripcion: "apanado",
+              precio: "30",
+            },
+            {
+              nombre: "Pescado",
+              descripcion: "a lo macho",
+              precio: "42",
+            },
+            {
+              nombre: "Camarones",
+              descripcion: "al ajo",
               precio: "40",
-            },          
-            
+            },
+            {
+              nombre: "Pulpo",
+              descripcion: "a la parrilla",
+              precio: "47",
+            },
+          ]}
+        />
+      </div>
+      {/* Tarjeta de leches de tigre */}
+      <div className="p-4 md:p-8 max-w-7xl mx-auto rounded-lg">
+        <Tarjeta
+          titulo="Entradas concheras"
+          imagen={leche}
+          items={[
+            {
+              nombre: "Leche de tigre",
+              descripcion: "ORIGINAL",
+              puntos: " ...............................",
+              precio: "12",
+            },
+            {
+              nombre: "Leche de tigre",
+              descripcion: "al aji amarillo",
+              puntos: " ...............................",
+              precio: "15",
+            },
+            {
+              nombre: "Leche de pantera",
+              descripcion: "(conchas negras)",
+              puntos: " ...............................",
+              precio: "18",
+            },
+            {
+              nombre: "Leche de tigre",
+              descripcion: "al rocoto",
+              puntos: " ...............................",
+              precio: "16",
+            },
+            {
+              nombre: "Leche de tigre",
+              descripcion: "Y DALE 'U'",
+              puntos: " ...............................",
+              precio: "22",
+            },
+            {
+              nombre: "Leche de tigre",
+              descripcion: "arriba 'ALIANZA'",
+              puntos: " ...............................",
+              precio: "20",
+            },
           ]}
         />
       </div>
