@@ -11,9 +11,9 @@ const Nosotros = () => {
         <div className="relative md:grid grid-cols-2 gap-2">
           <div className="p-[5%] md:p-[15%] justify-center flex-col flex">
             <p className="fusion text-secondary text-4xl md:text-7xl m-2 p-0">
-              Fusión peruana
+              Fusión Peruana
             </p>
-            <p className="fusion text-secondary text-4xl md:text-7xl m-2 p-0">
+            <p className="fusion text-secondary text text-4xl md:text-5xl m-2 p-0">
               Fusión Perucha
             </p>
             <img

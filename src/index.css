@@ -44,6 +44,21 @@ body {
   ); 
 }
 
+.carta{
+  background-image: url("/src/assets/img/textura.png");
+  height: calc(
+    70vh - 60px
+  ); 
+}
+
+.carta2{
+  background-image: url("/src/assets/img/textura.png");
+  height: calc(
+    99vh - 60px
+  ); 
+}
+
+
 .box::before,
 .box::after {
   content: "";

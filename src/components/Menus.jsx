@@ -4,6 +4,7 @@ import ceviche from "../assets/img/platos/ceviche2.jpg";
 import arrozPato from "../assets/img/platos/arrozconpato.jpg";
 import chicharronPescado from "../assets/img/platos/chicharron.jpg";
 import leche from "../assets/img/platos/leche.jpg";
+import menu from "../assets/img/menu.png";
 
 const Tarjeta = ({ titulo, precio, items, imagen }) => {
   return (
@@ -52,7 +53,7 @@ const Tarjeta = ({ titulo, precio, items, imagen }) => {
 
 const Tarjeta2 = ({ titulo, precio, items, imagen }) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 rounded-lg ">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 rounded-lg mb-10">
       {/* Imagen centrada */}
       <div className="flex justify-center">
         <img
@@ -63,7 +64,7 @@ const Tarjeta2 = ({ titulo, precio, items, imagen }) => {
       </div>
       {/* Contenido a la izquierda */}
       <div className="">
-        <h2 className="text-3xl md:text-5xl font-bold w-full text-secondary mb-8 fusion">
+        <h2 className="text-3xl md:text-5xl font-bold w-full text-secondary mb-2 fusion">
           {titulo}
         </h2>
         {items.map((item, index) => (
@@ -149,7 +150,7 @@ const Menus = () => {
         />
       </div>
       {/* Tarjeta de Ceviches */}
-      <div className="box flex flex-col justify-center bg-primary bg-cover bg-no-repeat bg-center relative w-full ">
+      <div className="carta2 flex flex-col justify-center bg-primary bg-cover bg-no-repeat bg-center relative w-full ">
         <Tarjeta2
           titulo="Ceviches"
           imagen={ceviche}
@@ -211,7 +212,7 @@ const Menus = () => {
             },
             {
               nombre: "Cabrito",
-              descripcion: "(LA ESPECIALIDAD)",
+              descripcion: "(ESPECIALIDAD)",
               puntos: " ...............................",
               precio: "39",
             },
@@ -235,7 +236,7 @@ const Menus = () => {
             },
             {
               nombre: "Lomo saltado",
-              descripcion: " (lomo fino)",
+              descripcion: " (l. fino)",
               puntos: " ...............................",
               precio: "45",
             },
@@ -243,7 +244,7 @@ const Menus = () => {
         />
       </div>
       {/* Tarjeta de Chicharrones */}
-      <div className="box flex flex-col justify-center bg-primary bg-cover bg-no-repeat bg-center relative w-full ">
+      <div className="carta2 flex flex-col justify-center bg-primary bg-cover bg-no-repeat bg-center relative w-full ">
         <Tarjeta2
           titulo="Chicharrones"
           imagen={chicharronPescado}
@@ -279,16 +280,6 @@ const Menus = () => {
               precio: "30",
             },
             {
-              nombre: "Pescado",
-              descripcion: "a lo macho",
-              precio: "42",
-            },
-            {
-              nombre: "Camarones",
-              descripcion: "al ajo",
-              precio: "40",
-            },
-            {
               nombre: "Pulpo",
               descripcion: "a la parrilla",
               precio: "47",
@@ -299,47 +290,75 @@ const Menus = () => {
       {/* Tarjeta de leches de tigre */}
       <div className="p-4 md:p-8 max-w-7xl mx-auto rounded-lg">
         <Tarjeta
-          titulo="Entradas concheras"
+          titulo="Leches de tigre"
           imagen={leche}
           items={[
             {
-              nombre: "Leche de tigre",
+              nombre: "L. T.",
               descripcion: "ORIGINAL",
               puntos: " ...............................",
               precio: "12",
             },
             {
-              nombre: "Leche de tigre",
+              nombre: "L. T.",
               descripcion: "al aji amarillo",
               puntos: " ...............................",
               precio: "15",
             },
             {
-              nombre: "Leche de pantera",
-              descripcion: "(conchas negras)",
+              nombre: "L. Pantera",
+              descripcion: "(c. negras)",
               puntos: " ...............................",
               precio: "18",
             },
             {
-              nombre: "Leche de tigre",
+              nombre: "L. T. ",
               descripcion: "al rocoto",
               puntos: " ...............................",
               precio: "16",
             },
             {
-              nombre: "Leche de tigre",
-              descripcion: "Y DALE 'U'",
+              nombre: "L. T.",
+              descripcion: "arriba 'ALIANZA'",
               puntos: " ...............................",
               precio: "22",
             },
             {
-              nombre: "Leche de tigre",
-              descripcion: "arriba 'ALIANZA'",
+              nombre: "L. T.",
+              descripcion: "y DALE 'U'",
               puntos: " ...............................",
-              precio: "20",
+              precio: "22",
             },
           ]}
         />
+      </div>
+
+      {/* Descarga de carta */}
+      <div className="carta flex flex-col justify-center items-center bg-primary relative w-full">
+        <div className="relative flex flex-col md:flex-row items-center">
+          <div className="text-center md:text-left mb-6 md:mb-0">
+            <p className="text-secondary fusion text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              Descarga nuestra 
+              <br />
+              carta marina ahora
+            </p>
+            <p className="text-white text-lg md:text-xl font-light mb-6">
+              Explora el auténtico sabor del mar en cada bocado.
+              <br />
+              ¡Descubre nuestra exquisita selección!
+            </p>
+            <button className="bg-secondary boton text-white py-3 px-6 rounded-full text-lg md:text-xl font-bold">
+              Descargar aquí
+            </button>
+          </div>
+          <div className="flex justify-center items-center">
+            <img
+              className="w-[250px] transform rotate-[5deg] mt-4 m-5 md:mt-0"
+              src={menu}
+              alt="menu"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
