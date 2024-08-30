@@ -4,7 +4,7 @@ import ceviche from "../assets/img/platos/ceviche2.jpg";
 import arrozPato from "../assets/img/platos/arrozconpato.jpg";
 import chicharronPescado from "../assets/img/platos/chicharron.jpg";
 import leche from "../assets/img/platos/leche.jpg";
-import menu from "../assets/img/menu.png";
+import menu from "../assets/img/carta.png";
 
 const Tarjeta = ({ titulo, items, imagen, invertida = false }) => {
   // Asignar diferentes estilos de texto según si la tarjeta está invertida o no
@@ -162,6 +162,7 @@ const Menus = () => {
             <img
               className="w-[150px] md:w-[250px] transform rotate-[5deg] mt-4 m-5 md:mt-0"
               src={menu}
+              alt="Carta"
             />
           </div>
         </div>
