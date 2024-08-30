@@ -162,7 +162,7 @@ const Menus = () => {
             <img
               className="w-[150px] md:w-[250px] transform rotate-[5deg] mt-4 m-5 md:mt-0"
               src={menu}
-              alt="menu"
+              alt="Carta"
             />
           </div>
         </div>
