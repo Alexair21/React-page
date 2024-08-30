@@ -171,4 +171,4 @@ const Menus = () => {
   );
 };
 
-export default menus;
+export default Menus;
