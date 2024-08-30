@@ -1,8 +1,8 @@
 import React from "react";
-import concha from "../assets/img/concha.png";
-import arrozconpato from "../assets/img/arrozconpato.jpg";
-import cabrito from "../assets/img/cabrito.jpg";
-import ceviche2 from "../assets/img/ceviche2.jpg";
+import concha from "../assets/img/figuras/concha.png";
+import arrozconpato from "../assets/img/platos/arrozconpato.jpg";
+import cabrito from "../assets/img/platos/cabrito.jpg";
+import ceviche2 from "../assets/img/platos/ceviche2.jpg";
 
 const Card = ({ title, description, price, imgSrc, imgAlt }) => {
   return (

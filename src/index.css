@@ -44,19 +44,22 @@ body {
   ); 
 }
 
-.carta{
-  background-image: url("/src/assets/img/textura.png");
-  height: calc(
-    70vh - 60px
-  ); 
+/* Añade estas reglas a tu CSS si no usas Tailwind */
+.invertida {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-.carta2{
-  background-image: url("/src/assets/img/textura.png");
-  height: calc(
-    99vh - 60px
-  ); 
+.no-invertida {
+  display: flex;
+  flex-direction: row;
 }
+
+
+.carta{
+  background-image: url("/src/assets/img/textura.png");
+}
+
 
 
 .box::before,

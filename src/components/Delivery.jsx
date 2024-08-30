@@ -1,8 +1,8 @@
 import React from "react";
 
-import pulpo from "../assets/img/pulpo.png";
+import pulpo from "../assets/img/figuras/pulpo.png";
 import chef from "../assets/img/chef.png";
-import langosta from "../assets/img/langosta.png";
+import langosta from "../assets/img/figuras/langosta.png";
 
 const Delivery = () => {
   return (

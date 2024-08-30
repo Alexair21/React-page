@@ -1,6 +1,6 @@
 import React from "react";
-import alitas from "../assets/img/alitas.jpg";
-import pulpo from "../assets/img/pulpo.jpg";
+import alitas from "../assets/img/platos/alitas.jpg";
+import pulpo from "../assets/img/platos/pulpo.jpg";
 
 const Nosotros = () => {
   return (
