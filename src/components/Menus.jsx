@@ -13,9 +13,9 @@ const Tarjeta = ({ titulo, items, imagen, invertida = false }) => {
   const precioClase = invertida ? "text-primary" : "text-primary";
 
   return (
-    <div className={`flex flex-col lg:flex-row gap-8 items-center p-8 rounded-lg ${invertida ? 'lg:flex-row-reverse' : ''}`}>
+    <div className={`flex flex-col lg:flex-row gap-8 items-center p-8 rounded-lg ${invertida ? 'flex-row-reverse' : ''}`}>
       {/* Imagen centrada */}
-      <div className={`flex justify-center ${invertida ? 'lg:order-last' : ''}`}>
+      <div className="flex justify-center lg:w-1/2">
         <img
           src={imagen}
           alt={titulo}
@@ -24,7 +24,7 @@ const Tarjeta = ({ titulo, items, imagen, invertida = false }) => {
       </div>
 
       {/* Contenido */}
-      <div className={`flex flex-col ${invertida ? 'lg:order-first' : ''}`}>
+      <div className="lg:w-1/2">
         <h2 className={`text-2xl md:text-5xl font-bold w-full mb-4 fusion ${textoClase}`}>
           {titulo}
         </h2>
@@ -77,7 +77,7 @@ const Menus = () => {
         { nombre: "Ceviche", descripcion: "original", precio: "33" },
         { nombre: "Ceviche", descripcion: "mixto", precio: "35" },
         { nombre: "Ceviche", descripcion: "de corvina", precio: "37" },
-        { nombre: "Ceviche", descripcion: "de conchas negras", precio: "40" },
+        { nombre: "Ceviche", descripcion: "de c. negras ", precio: "40" },
         { nombre: "Ceviche", descripcion: "mellicero", precio: "40" },
         { nombre: "Tiradito", descripcion: "de pescado", precio: "30" },
         { nombre: "Festival", descripcion: "marino", precio: "65" },
@@ -160,7 +160,7 @@ const Menus = () => {
           </div>
           <div className="flex justify-center items-center">
             <img
-              className="w-[250px] transform rotate-[5deg] mt-4 m-5 md:mt-0"
+              className="w-[150px] md:w-[250px] transform rotate-[5deg] mt-4 m-5 md:mt-0"
               src={menu}
               alt="menu"
             />
@@ -171,4 +171,4 @@ const Menus = () => {
   );
 };
 
-export default menus;
+export default Menus;
