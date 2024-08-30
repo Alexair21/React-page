@@ -5,15 +5,27 @@ import arrozPato from "../assets/img/platos/arrozconpato.jpg";
 import chicharronPescado from "../assets/img/platos/chicharron.jpg";
 import leche from "../assets/img/platos/leche.jpg";
 import menu from "../assets/img/carta.png";
+import limon from "../assets/img/figuras/limon.png";
+import tentaculo from "../assets/img/figuras/tentaculo.png";
+import cangrejo from "../assets/img/figuras/cangrejo.png";
+import pulpo from "../assets/img/figuras/pulpo.png";
+import pez from "../assets/img/figuras/pez.png";
+import cangrejo2 from "../assets/img/figuras/cangrejo2.png";
+import limon2 from "../assets/img/figuras/limon2.png";
+
+const decoraciones = [tentaculo, cangrejo, pulpo,cangrejo2,limon2];
 
 const Tarjeta = ({ titulo, items, imagen, invertida = false }) => {
-  // Asignar diferentes estilos de texto según si la tarjeta está invertida o no
   const textoClase = invertida ? "text-primary" : "text-teal-600";
   const descripcionClase = invertida ? "text-secondary" : "text-secondary";
   const precioClase = invertida ? "text-primary" : "text-primary";
 
   return (
-    <div className={`flex flex-col lg:flex-row gap-8 items-center p-8 rounded-lg ${invertida ? 'flex-row-reverse' : ''}`}>
+    <div
+      className={`flex flex-col lg:flex-row gap-8 items-center p-8 rounded-lg ${
+        invertida ? "flex-row-reverse" : ""
+      }`}
+    >
       {/* Imagen centrada */}
       <div className="flex justify-center lg:w-1/2">
         <img
@@ -24,18 +36,24 @@ const Tarjeta = ({ titulo, items, imagen, invertida = false }) => {
       </div>
 
       {/* Contenido */}
-      <div className="lg:w-1/2">
-        <h2 className={`text-2xl md:text-5xl font-bold w-full mb-4 fusion ${textoClase}`}>
+      <div className="lg:w-1/2 mt-20">
+        <h2
+          className={`text-2xl md:text-5xl font-bold w-full mb-4 fusion ${textoClase}`}
+        >
           {titulo}
         </h2>
         {items.map((item, index) => (
           <div key={index} className="flex justify-between items-center mb-2">
             <div className="flex items-center">
               <span className={`text-xs md:text-lg mr-2 ${textoClase}`}>•</span>
-              <span className={`md:font-bold text-1xl md:text-xl ${textoClase}`}>
+              <span
+                className={`md:font-bold text-1xl md:text-xl ${textoClase}`}
+              >
                 {item.nombre}
               </span>
-              <span className={`md:font-bold text-sm md:text-xl ml-1 ${descripcionClase}`}>
+              <span
+                className={`md:font-bold text-sm md:text-xl ml-1 ${descripcionClase}`}
+              >
                 {item.descripcion}
               </span>
             </div>
@@ -44,10 +62,14 @@ const Tarjeta = ({ titulo, items, imagen, invertida = false }) => {
               <span className={`text-xs md:text-xl font-bold ${precioClase}`}>
                 S/.
               </span>
-              <span className={`text-lg md:text-xl md:font-bold ml-1 ${precioClase}`}>
+              <span
+                className={`text-lg md:text-xl md:font-bold ml-1 ${precioClase}`}
+              >
                 {item.precio}
               </span>
-              <span className={`text-xs font-bold ml-1 ${precioClase}`}>.00</span>
+              <span className={`text-xs font-bold ml-1 ${precioClase}`}>
+                .00
+              </span>
             </div>
           </div>
         ))}
@@ -125,18 +147,37 @@ const Menus = () => {
 
   return (
     <section>
-      <div className="p-4 md:p-8 max-w-7xl mx-auto rounded-lg">
-        <h1 className="fusion text-4xl md:text-5xl lg:text-7xl font-bold text-center mt-6 md:mt-10 mb-4 md:mb-6 text-secondary">
+      <div className="relative w-full flex flex-col items-center justify-center overflow-hidden p-4">
+        {/* Título */}
+        <p className="fusion text-3xl md:text-6xl text-secondary text-center md:mb-8 mt-6">
           Nuestra Carta
-        </h1>
+        </p>
+
+        {/* Imagen de limón */}
+        <img
+          className="absolute top-0 right-4 md:right-80 w-[20%] md:w-[10%]"
+          src={limon}
+          alt="Limón"
+        />
       </div>
 
       {secciones.map((seccion, index) => (
         <div
           key={index}
-          className={`p-4 md:p-8 max-w-7xl mx-auto rounded-lg ${index % 2 === 1 ? '' : ''}`}
+          className={`relative p-4 md:p-8 max-w-7xl mx-auto rounded-lg ${
+            index % 2 === 1 ? "flex-row-reverse" : ""
+          }`}
         >
           <Tarjeta {...seccion} invertida={index % 2 === 1} />
+
+          {/* Imagen decorativa */}
+          <img
+            src={decoraciones[index % decoraciones.length]}
+            alt={`Decoración ${index + 1}`}
+            className={`absolute top-0 ${
+              index % 2 === 1 ? "-right-10" : "-left-28"
+            } w-[15%] md:w-[18%] md:block hidden`}
+          />
         </div>
       ))}
 
