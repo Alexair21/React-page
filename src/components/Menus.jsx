@@ -8,12 +8,12 @@ import menu from "../assets/img/carta.png";
 import limon from "../assets/img/figuras/limon.png";
 import tentaculo from "../assets/img/figuras/tentaculo.png";
 import cangrejo from "../assets/img/figuras/cangrejo.png";
-import pulpo from "../assets/img/figuras/pulpo.png";
+import concha2 from "../assets/img/figuras/concha2.png";
 import pez from "../assets/img/figuras/pez.png";
 import cangrejo2 from "../assets/img/figuras/cangrejo2.png";
 import limon2 from "../assets/img/figuras/limon2.png";
 
-const decoraciones = [tentaculo, cangrejo, pulpo,cangrejo2,limon2];
+const decoraciones = [tentaculo, cangrejo, concha2,cangrejo2,limon2];
 
 const Tarjeta = ({ titulo, items, imagen, invertida = false }) => {
   const textoClase = invertida ? "text-primary" : "text-teal-600";

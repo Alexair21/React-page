@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './components/HomePage'; // Importa el nuevo componente
 import Menus from './components/Menus';
+import Galeria from './components/Galeria';
 
 function App() {
   return (
@@ -11,9 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} /> {/* Usa HomePage para la ruta principal */}
         <Route path="/menu" element={<Menus />} />
-        <Route path="/nosotros" element={<HomePage />} /> {/* Redirige a la página principal que incluye "Nosotros" */}
-        <Route path="/platillos" element={<HomePage />} /> {/* Redirige a la página principal que incluye "Platillos" */}
-        <Route path="/delivery" element={<HomePage />} /> {/* Redirige a la página principal que incluye "Delivery" */}
+        <Route path="/galeria" element={<Galeria />} />
       </Routes>
       <Footer />
     </Router>
