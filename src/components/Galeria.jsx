@@ -10,18 +10,29 @@ import pez3 from "../assets/img/figuras/pez3.png";
 import pez4 from "../assets/img/figuras/pez4.png";
 import langosta from "../assets/img/figuras/langosta.png";
 
-const decoraciones = [pezca, pezmartillo, pulpo, gaviota, pez2,foca,pez3,pez4,langosta];
+// Galería de imágenes
+import cabrito from "../assets/img/galeria/cabrito.jpg";
+import camarero from "../assets/img/galeria/1.jpg";
+import comensales1 from "../assets/img/galeria/2.jpg";
+import chef from "../assets/img/galeria/chef.jpg";
+import chicharron from "../assets/img/galeria/chicharron.jpg";
+import comensales2 from "../assets/img/galeria/3.jpg";
+import cuy from "../assets/img/galeria/cuy.jpg";
+import plato1 from "../assets/img/galeria/plato1.jpg";
+import pulpoImg from "../assets/img/galeria/pulpo.jpg";
+
+const decoraciones = [pezca, pezmartillo, pulpo, gaviota, pez2, foca, pez3, pez4, langosta];
 
 const images = [
-  { src: "../assets/img/galeria/cabrito.jpg", alt: "Cabrito" },
-  { src: "../assets/img/galeria/1.jpg", alt: "Camarero Norteño" },
-  { src: "../assets/img/galeria/2.jpg", alt: "Comensales" },
-  { src: "../assets/img/galeria/chef.jpg", alt: "Chef" },
-  { src: "../assets/img/galeria/chicharron.jpg", alt: "Chicharron" },
-  { src: "../assets/img/galeria/3.jpg", alt: "Comensales" },
-  { src: "../assets/img/galeria/cuy.jpg", alt: "Cuy" },
-  { src: "../assets/img/galeria/plato1.jpg", alt: "Plato 1" },
-  { src: "../assets/img/galeria/pulpo.jpg", alt: "Pulpo" },
+  cabrito,
+  camarero,
+  comensales1,
+  chef,
+  chicharron,
+  comensales2,
+  cuy,
+  plato1,
+  pulpoImg
 ];
 
 const Galeria = () => {
@@ -62,10 +73,10 @@ const Galeria = () => {
           }`}
         >
           <img
-            src={image.src}
-            alt={image.alt}
+            src={image}
+            alt={`Galería ${index + 1}`}
             className="cursor-pointer rounded-lg shadow-lg transition-transform transform hover:scale-105 w-[70%]"
-            onClick={() => handleClick(image.src)}
+            onClick={() => handleClick(image)}
           />
 
           {/* Imagen decorativa */}
