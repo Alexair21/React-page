@@ -13,15 +13,15 @@ import langosta from "../assets/img/figuras/langosta.png";
 const decoraciones = [pezca, pezmartillo, pulpo, gaviota, pez2,foca,pez3,pez4,langosta];
 
 const images = [
-  { src: "src/assets/img/galeria/cabrito.jpg", alt: "Cabrito" },
-  { src: "src/assets/img/galeria/1.jpg", alt: "Camarero Norteño" },
-  { src: "src/assets/img/galeria/2.jpg", alt: "Comensales" },
-  { src: "src/assets/img/galeria/chef.jpg", alt: "Chef" },
-  { src: "src/assets/img/galeria/chicharron.jpg", alt: "Chicharron" },
-  { src: "src/assets/img/galeria/3.jpg", alt: "Comensales" },
-  { src: "src/assets/img/galeria/cuy.jpg", alt: "Cuy" },
-  { src: "src/assets/img/galeria/plato1.jpg", alt: "Plato 1" },
-  { src: "src/assets/img/galeria/pulpo.jpg", alt: "Pulpo" },
+  { src: "../assets/img/galeria/cabrito.jpg", alt: "Cabrito" },
+  { src: "../assets/img/galeria/1.jpg", alt: "Camarero Norteño" },
+  { src: "../assets/img/galeria/2.jpg", alt: "Comensales" },
+  { src: "../assets/img/galeria/chef.jpg", alt: "Chef" },
+  { src: "../assets/img/galeria/chicharron.jpg", alt: "Chicharron" },
+  { src: "../assets/img/galeria/3.jpg", alt: "Comensales" },
+  { src: "../assets/img/galeria/cuy.jpg", alt: "Cuy" },
+  { src: "../assets/img/galeria/plato1.jpg", alt: "Plato 1" },
+  { src: "../assets/img/galeria/pulpo.jpg", alt: "Pulpo" },
 ];
 
 const Galeria = () => {
