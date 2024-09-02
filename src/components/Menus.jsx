@@ -22,7 +22,7 @@ const Tarjeta = ({ titulo, items, imagen, invertida = false }) => {
 
   return (
     <div
-      className={`flex flex-col lg:flex-row gap-8 items-center p-8 rounded-lg ${
+      className={`flex flex-col lg:flex-row gap-8 items-center p-8 rounded-lg efecto ${
         invertida ? "flex-row-reverse" : ""
       }`}
     >
