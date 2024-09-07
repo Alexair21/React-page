@@ -68,7 +68,7 @@ const Galeria = () => {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`relative w-4/5 sm:w-1/2 md:w-2/5 lg:w-1/3 my-6 p-2 efecto ${
+          className={`relative w-[80%] sm:w-1/2 md:w-2/5 lg:w-1/3 my-6 ${
             index % 2 === 1 ? "md:mr-[40%] mr-[0%]" : "md:ml-[60%] ml-[50%]"
           }`}
         >
@@ -100,7 +100,7 @@ const Galeria = () => {
             &times;
           </span>
           <img
-            className="max-w-full max-h-full"
+            className="max-w-full max-h-full "
             src={selectedImage}
             alt="Selected"
           />
