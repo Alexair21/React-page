@@ -68,14 +68,16 @@ const Galeria = () => {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`relative w-[80%] sm:w-1/2 md:w-2/5 lg:w-1/3 my-6 ${
-            index % 2 === 1 ? "md:mr-[40%] mr-[0%]" : "md:ml-[60%] ml-[50%]"
+          className={`relative bgr w-[70%] sm:w-1/2 md:w-2/5 lg:w-1/3 my-6 ${
+            index % 2 === 1 ? "md:mr-[40%] mr-[0%]" : "md:ml-[60%] ml-[30%]"
           }`}
         >
           <img
             src={image}
             alt={`Galería ${index + 1}`}
-            className="cursor-pointer rounded-lg shadow-lg transition-transform transform hover:scale-105 w-[70%]"
+            className={`cursor-pointer rounded-lg shadow-lg transition-transform transform hover:scale-105 w-[75%] ${
+              index % 2 === 1 ? "md:mr-[40%] -ml-[15%]" : "md:ml-[10%] ml-[20%]"
+            }`}
             onClick={() => handleClick(image)}
           />
 
