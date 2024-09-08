@@ -31,8 +31,6 @@ Este es un proyecto web de un restaurante llamado **La Gran Concha Norteña**, d
 ## Instalación y configuración
 
 Para instalar y configurar este proyecto localmente, sigue estos pasos:
-
-1. Pasos para ver el proyecto
    ```bash
    git clone https://github.com/usuario/restaurante-react.git
    npm install
